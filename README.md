@@ -49,6 +49,7 @@ Menu Visualizar Classificação
 1. Exibir Classificação Atual
 2. Voltar ao Menu Principal
 
+// ----------------------------------------- COMPILAÇÃO ---------------------------------------------------
 
-Autores: Dionatan, Bruno e Derson. 
-Matéria: Prog 1
+cmd (compliar todas as classes): javac campeonato/*.java Main.java     
+cmd (executar o programa): java Main
