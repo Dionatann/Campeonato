@@ -48,3 +48,7 @@ Menu Visualizar Classificação
 --- Classificação ---
 1. Exibir Classificação Atual
 2. Voltar ao Menu Principal
+
+
+Autores: Dionatan, Bruno e Derson. 
+Matéria: Prog 1
