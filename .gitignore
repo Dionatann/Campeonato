@@ -1,0 +1,56 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Eclipse specific files
+.project
+.classpath
+/.settings/
+/target/
+/bin/
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.iws
+/out/
+
+# NetBeans specific files
+nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/nbactions.xml
+/nb-configuration.xml
+
+# Maven specific files
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle specific files
+.gradle/
+/build/
+
+# Other
+.DS_Store
+*.swp
+*.swo
+*~
