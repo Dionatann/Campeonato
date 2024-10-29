@@ -64,15 +64,21 @@ cmd (executar o programa): java Main
 
 - usar org.json lib para converte os dados para JSON (Pesistir os dados)
 
-- Automatizar alguns menus de criação (usar functions aleatorio)
 
-- Tratamento de erros e filtros em requisitar e manipular dados
+- Automatizar alguns menus de criação (usar functions aleatorio), filtros em requisitar e manipular dados
 
-- Provavel (Teste unitário)
+
+- Tratamento de erros e Provavel (Teste unitário)
 
 - Testar a javaDOC (documentação das Classes)
 
 
+
 - Classificação deu treta (na opção 4. Exibir Classificação)
 
-//------------------------------------ END FUNCIONALIDADE ------------------------------------------------ c
+//------------------------------------ END FUNCIONALIDADE ------------------------------------------------ 
+
+
+
+// executar
+java -cp target/meu-projeto-1.0-SNAPSHOT.jar:src Main

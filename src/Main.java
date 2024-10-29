@@ -1,6 +1,9 @@
 import campeonato.Campeonato;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import java.util.Scanner;
+
 
 /**
  * Classe principal que interage com o usuário via CLI.
