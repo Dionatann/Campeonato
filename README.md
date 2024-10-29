@@ -53,3 +53,18 @@ Menu Visualizar Classificação
 
 cmd (compliar todas as classes): javac campeonato/*.java Main.java     
 cmd (executar o programa): java Main
+
+/// ------------------------------------- Novas Funcionalidade -------------------------------------------
+
+- Estruturar onde serão armazenados os dados, diretorios....
+
+- usar org.json lib para converte os dados para JSON (Pesistir os dados)
+
+- Automatizar alguns menus de criação (usar functions aleatorio)
+
+- Tratamento de erros e filtros em requisitar e manipular dados
+
+- Provavel (Teste unitário)
+
+- Testar a javaDOC (documentação das Classes)
+
