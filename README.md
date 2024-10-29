@@ -49,10 +49,14 @@ Menu Visualizar Classificação
 1. Exibir Classificação Atual
 2. Voltar ao Menu Principal
 
+
 // ----------------------------------------- COMPILAÇÃO ---------------------------------------------------
 
 cmd (compliar todas as classes): javac campeonato/*.java Main.java     
 cmd (executar o programa): java Main
+
+// ----------------------------------------- END ----------------------------------------------------------
+
 
 /// ------------------------------------- Novas Funcionalidade -------------------------------------------
 
@@ -68,3 +72,7 @@ cmd (executar o programa): java Main
 
 - Testar a javaDOC (documentação das Classes)
 
+
+- Classificação deu treta (na opção 4. Exibir Classificação)
+
+//------------------------------------ END FUNCIONALIDADE ------------------------------------------------ c
