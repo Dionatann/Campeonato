@@ -15,39 +15,45 @@ Possíveis Funcionalidades:
 Sugestões de Menus de Opções
 
 Menu Principal
-=== Campeonato de Futebol ===
-1. Gerenciar Times
-2. Agendar Partidas
-3. Registrar Resultados
-4. Visualizar Classificação
-5. Salvar Dados
-6. Carregar Dados
-7. Sair
+
+    === Campeonato de Futebol ===
+    1. Gerenciar Times
+    2. Agendar Partidas
+    3. Registrar Resultados
+    4. Visualizar Classificação
+    5. Salvar Dados
+    6. Carregar Dados
+    7. Sair
 
 Menu Gerenciar Times
---- Gerenciar Times ---
-1. Adicionar Novo Time
-2. Editar Time
-3. Remover Time
-4. Listar Todos os Times
-5. Voltar ao Menu Principal
+
+    --- Gerenciar Times ---
+    1. Adicionar Novo Time
+    2. Editar Time
+    3. Remover Time
+    4. Listar Todos os Times
+    5. Voltar ao Menu Principal
 
 Menu Agendar Partidas
---- Agendar Partidas ---
-1. Gerar Cronograma Automático
-2. Visualizar Cronograma Atual
-3. Voltar ao Menu Principal
+
+    --- Agendar Partidas ---
+    1. Gerar Cronograma Automático
+    2. Visualizar Cronograma Atual
+    3. Voltar ao Menu Principal
 
 Menu Registrar Resultados
---- Registrar Resultados ---
-1. Inserir Resultado de Partida
-2. Atualizar Resultado de Partida
-3. Voltar ao Menu Principal
+
+    --- Registrar Resultados ---
+    1. Inserir Resultado de Partida
+    2. Atualizar Resultado de Partida
+    3. Voltar ao Menu Principal
 
 Menu Visualizar Classificação
---- Classificação ---
-1. Exibir Classificação Atual
-2. Voltar ao Menu Principal
+
+    --- Classificação ---
+    1. Exibir Classificação Atual
+    2. Voltar ao Menu Principal
+
 
 
 // ----------------------------------------- COMPILAÇÃO ---------------------------------------------------
@@ -55,30 +61,36 @@ Menu Visualizar Classificação
 cmd (compliar todas as classes): javac campeonato/*.java Main.java     
 cmd (executar o programa): java Main
 
+(instalar o mavem gerenciador de pacotes java) sudo apt install maven
+(comando maven para limpar antes de instalar as dependencia) mvn clean install 
+
+// executar
+cdm (executar o programa com as dependencias) java -cp target/meu-projeto-1.0-SNAPSHOT.jar:src Main
+
+
+
 // ----------------------------------------- END ----------------------------------------------------------
+
+
 
 
 /// ------------------------------------- Novas Funcionalidade -------------------------------------------
 
+DIONATAN
 - Estruturar onde serão armazenados os dados, diretorios....
-
 - usar org.json lib para converte os dados para JSON (Pesistir os dados)
 
-
+DERSON
 - Automatizar alguns menus de criação (usar functions aleatorio), filtros em requisitar e manipular dados
 
-
+BRUNO
 - Tratamento de erros e Provavel (Teste unitário)
-
 - Testar a javaDOC (documentação das Classes)
 
-
-
+REVISAR
 - Classificação deu treta (na opção 4. Exibir Classificação)
-
 //------------------------------------ END FUNCIONALIDADE ------------------------------------------------ 
 
 
 
-// executar
-java -cp target/meu-projeto-1.0-SNAPSHOT.jar:src Main
+
