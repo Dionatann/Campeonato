@@ -1,21 +1,17 @@
 import campeonato.Campeonato;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 import java.util.Scanner;
-
 
 /**
  * Classe principal que interage com o usuário via CLI.
  */
 public class Main {
-    // instancia a classe Campeonato
+    // Instancia a classe Campeonato
     private static Campeonato campeonato = new Campeonato();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int opcao;
-        // estrutura do while para mostrar as opções
+        // Estrutura do while para mostrar as opções
         do {
             exibirMenuPrincipal();
             opcao = scanner.nextInt();
@@ -59,14 +55,14 @@ public class Main {
         System.out.println("7. Sair");
     }
 
-    // menu gerenciarTimes
+    // Menu gerenciarTimes
     private static void gerenciarTimes() {
         System.out.println("--- Gerenciar Times ---");
         System.out.println("1. Adicionar Novo Time");
         System.out.println("2. Remover Time");
         System.out.println("3. Listar Todos os Times");
         int opcao = scanner.nextInt();
-        scanner.nextLine(); // Limpa a proxima entrada
+        scanner.nextLine(); // Limpa a entrada
 
         switch (opcao) {
             case 1:
@@ -77,11 +73,13 @@ public class Main {
             case 2:
                 System.out.print("Nome do Time a Remover: ");
                 nome = scanner.nextLine();
-                campeonato.addTime(nome);
+                campeonato.getGerenciadorDeTimes().removerTime(nome);
                 break;
             case 3:
                 campeonato.listarTimes();
                 break;
+            default:
+                System.out.println("Opção inválida.");
         }
     }
 
@@ -106,20 +104,16 @@ public class Main {
     }
 
     private static void salvarDados() {
-        try {
-            campeonato.salvarDados("dados_campeonato.ser");
-            System.out.println("Dados salvos com sucesso.");
-        } catch (Exception e) {
-            System.out.println("Erro ao salvar dados: " + e.getMessage());
-        }
+        String caminhoTimes = "times.json";
+        String caminhoPartidas = "partidas.json";
+        
+        campeonato.salvarDados(caminhoTimes, caminhoPartidas);
     }
 
     private static void carregarDados() {
-        try {
-            campeonato = Campeonato.carregarDados("dados_campeonato.ser");
-            System.out.println("Dados carregados com sucesso.");
-        } catch (Exception e) {
-            System.out.println("Erro ao carregar dados: " + e.getMessage());
-        }
+        String caminhoTimes = "times.json";
+        String caminhoPartidas = "partidas.json";
+        
+        campeonato.carregarDados(caminhoTimes, caminhoPartidas);
     }
 }

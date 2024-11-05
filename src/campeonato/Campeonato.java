@@ -10,18 +10,18 @@ public class Campeonato {
     private GerenciadorDeTimes gerenciadorDeTimes;
     private GerenciadorDePartidas gerenciadorDePartidas;
 
-    // costrutor cria as duas classes de gerenciar as partidas e times
+    // Construtor que cria as instâncias para gerenciar as partidas e times
     public Campeonato() {
         gerenciadorDeTimes = new GerenciadorDeTimes();
         gerenciadorDePartidas = new GerenciadorDePartidas();
     }   
 
-    // Adicone um time ao gerenciador de time
+    // Adiciona um time ao gerenciador de times
     public void addTime(String nome) {
         gerenciadorDeTimes.addTime(nome);
     }
 
-    // lista times do campeonato
+    // Lista times do campeonato
     public void listarTimes() {
         List<Time> times = gerenciadorDeTimes.listarTimes();
         for (Time time : times) {
@@ -29,7 +29,7 @@ public class Campeonato {
         }
     }
 
-    // gera o conograma da partida
+    // Gera o cronograma das partidas
     public void gerarCronograma() {
         gerenciadorDePartidas.gerarCronograma(gerenciadorDeTimes.listarTimes());
     }
@@ -41,21 +41,30 @@ public class Campeonato {
         }
     }
 
+    // Registra o resultado de uma partida
     public void registrarResultado(int index, int golsTimeA, int golsTimeB) {
         gerenciadorDePartidas.addResultado(index, golsTimeA, golsTimeB);
     }
 
-
-    // salva os dados
-    public void salvarDados(String caminho) throws IOException {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(caminho))) {
-            oos.writeObject(this);
+    // Salva os dados dos times e das partidas
+    public void salvarDados(String caminhoTimes, String caminhoPartidas) {
+        try {
+            gerenciadorDeTimes.salvarTimes(caminhoTimes);
+            gerenciadorDePartidas.salvarPartidas(caminhoPartidas);
+            System.out.println("Dados do campeonato salvos com sucesso.");
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar dados do campeonato: " + e.getMessage());
         }
     }
 
-    public static Campeonato carregarDados(String caminho) throws IOException, ClassNotFoundException {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(caminho))) {
-            return (Campeonato) ois.readObject();
+    // Carrega os dados dos times e das partidas
+    public void carregarDados(String caminhoTimes, String caminhoPartidas) {
+        try {
+            gerenciadorDeTimes.carregarTimes(caminhoTimes);
+            gerenciadorDePartidas.carregarPartidas(caminhoPartidas);
+            System.out.println("Dados do campeonato carregados com sucesso.");
+        } catch (IOException e) {
+            System.out.println("Erro ao carregar dados do campeonato: " + e.getMessage());
         }
     }
 }
