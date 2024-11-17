@@ -75,4 +75,26 @@ public class GerenciadorDeTimes {
             System.out.println("Erro ao carregar os times: " + e.getMessage());
         }
     }
+
+    public List<Time> listarTimesComSaldoPositivo() {
+        List<Time> positivos = new ArrayList<>();
+        for (Time time : times) {
+            if (time.getSaldoDeGols() > 0) {
+                positivos.add(time);
+            }
+        }
+        return positivos;
+    }
+
+    public List<Time> listarTimesComMenosDeCincoPontos() {
+        List<Time> comPoucosPontos = new ArrayList<>();
+        for (Time time : times) {
+            if (time.getPontos() < 5) {
+                comPoucosPontos.add(time);
+            }
+        }
+        return comPoucosPontos;
+    }
+    
+    
 }

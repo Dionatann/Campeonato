@@ -6,9 +6,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class GerenciadorDePartidas {
     private List<Partida> partidas;
+    private static final int MAX_GOLS = 5;
+
 
     public GerenciadorDePartidas() {
         partidas = new ArrayList<>();
@@ -69,4 +72,38 @@ public class GerenciadorDePartidas {
             e.printStackTrace();
         }
     }
+
+    public void registrarResultadosAleatorios() {
+        Random random = new Random();
+        for (Partida partida : partidas) {
+            if (!partida.isRealizada()) {
+                int golsTimeA = random.nextInt(MAX_GOLS + 1);
+                int golsTimeB = random.nextInt(MAX_GOLS + 1);
+                partida.addResultado(golsTimeA, golsTimeB);
+            }
+        }
+        System.out.println("Resultados registrados automaticamente.");
+    }
+    
+
+    public List<Partida> listarPartidasRealizadas() {
+        List<Partida> realizadas = new ArrayList<>();
+        for (Partida partida : partidas) {
+            if (partida.isRealizada()) {
+                realizadas.add(partida);
+            }
+        }
+        return realizadas;
+    }
+    
+    public List<Partida> listarPartidasPorTime(Time time) {
+        List<Partida> partidasPorTime = new ArrayList<>();
+        for (Partida partida : partidas) {
+            if (partida.getTimeA().equals(time) || partida.getTimeB().equals(time)) {
+                partidasPorTime.add(partida);
+            }
+        }
+        return partidasPorTime;
+    }
+    
 }
